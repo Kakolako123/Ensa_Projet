@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ensa Marrakech</title>
+    <h:outputStylesheet name="css/style_web.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</h:head>
+
+<h:body>
+    <section style="height: 100vh; background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))">
+
+    <header style=" background-position: center; height: 100%;">
+        <h:graphicImage library="images" name="img3.png" alt="Background Image"
+                        style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1;"/>
+
+        <div id="navbar">
+            <h:graphicImage library="images" name="ensalogo.png" alt="ENSA Marrakech" />
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><h:link outcome="listUsers.xhtml">List</h:link></li>
+                    <li><h:link outcome="inscrire.xhtml">SignUp</h:link></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="content" >
+            <h1>Welcome to <span class="primary-text">Ensa Marrakech</span> where </h1>
+            <h1> The impossible is possible</h1>
+            <p>"Join our family today and be part of something extraordinary!"</p>
+            <h:outputLink outcome="inscrire.xhtml" styleClass="btn btn-primary">Create Account</h:outputLink>
+        </div>
+    </header>
+    </section>
+    <!-- Header End -->
+    <section id="about">
+        <div class="container">
+            <div class="title">
+                <h2>About ENSA Marrakech</h2>
+                <p>More than 20 years of excellence</p>
+            </div>
+            <div class="about-content">
+                <div>
+                    <p>The ENSA of Marrakech is a public institution of higher education belonging to Cadi Ayyad University. It is a public actor that plays a leadership role in high-value-added engineering education programs, ensuring quality training and skills development, built on shared commitment between engineering students, professors, and administrative and technical staff. Since its establishment in 2000, ENSA Marrakech has trained high-quality state engineers Today, they hold key positions in companies in Morocco and abroad, particularly in the service and industry sectors. Our mission is to train the engineers of tomorrow, through active pedagogy based on professional, international, and cultural openness. Our goal is to develop an entrepreneurial mindset, transforming students into key actors in their professional and cultural development. Our motto is to innovate to succeed.</p>
+                </div>
+                <h:graphicImage library="images" name="img1.jpg" alt="ENSA Marrakech" />
+            </div>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="container">
+            <div class="title">
+                <h2>Programs Offered</h2>
+                <h:outputText value="Explore our offered programs" />
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h:graphicImage library="images" name="computer_ing.png" alt="Computer Engineering" />
+                    <div>
+                        <h3>Computer Engineering</h3>
+                        <h:outputText
+                                value="The training aims to provide engineers with basic and dominant scientific foundations, necessary technical expertise, as well as cross-cutting knowledge in management and communication methods to ensure better integration of graduates into the national and international job market." />
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <h:graphicImage library="images" name="telecom.png" alt="Telecommunication and Networks Engineering" />
+                    <div>
+                        <h3>Telecommunication and Networks Engineering</h3>
+                        <h:outputText
+                                value="Training engineers with skills in the design, development, operation, and management of networks, systems, and services related to communication networks and systems. Engineering students complement their academic training by completing practical internships in companies during the Engineering Cycle." />
+                    </div>
+                </div>
+                <!-- Repeat the structure for the remaining pairs of programs -->
+                <div class="menu-item">
+                    <h:graphicImage library="images" name="electrique.png" alt="Electrical Engineering" />
+                    <div>
+                        <h3>Electrical Engineering</h3>
+                        <h:outputText
+                                value="These skills enable them to integrate into various industries,, industrial processes, embedded systems, automated systems, robotics, renewable energies, electronics and microelectronics, aerospace, and automotive industries." />
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <h:graphicImage library="images" name="indus.png" alt="Industrial Engineering and Logistics" />
+                    <div>
+                        <h3>Industrial Engineering and Logistics</h3>
+                        <h:outputText
+                                value="Its engineering students are capable of meeting the needs of sectors requiring highly skilled labor. They also contribute to technology transfer, support development projects, and are capable of innovation." />
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <h:graphicImage library="images" name="reseaux.png"
+                                    alt="Cyber Defense Engineering and Embedded Telecommunications Systems" />
+                    <div>
+                        <h3>Cyber Defense Engineering and Embedded Telecommunications Systems</h3>
+                        <h:outputText
+                                value="Training engineers with skills in the design, development, operation, and management of networks, systems, and services related to communication networks and systems. Engineering students complement their academic training by completing practical internships in companies during the Engineering Cycle." />
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <h:graphicImage library="images" name="security.png"
+                                    alt="Networks, Systems and Programmable Services" />
+                    <div>
+                        <h3>Networks, Systems and Programmable Services</h3>
+                        <h:outputText
+                                value="It aims to train each engineering student in methods and tools to combat cybercrime and vulnerabilities in information systems and address issues related to digital security domains. It also focuses on implementing embedded systems in various applications (avionics, automotive, etc.)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div>
+                        <h3>ADDRESS</h3>
+                        <p><i class="fa-solid fa-location-dot"></i>
+                            Ecole Nationale des Sciences Appliquées
+                            BP 575, Avenue Abdelkrim Khattabi, 40000, Guéliz-Marrakech</p>
+                        <p><i class="fas fa-phone"></i> Tél: (+212) 0524434745 - (+212) 0524434746</p>
+                        <p><i class="fas fa-envelope"></i> www.ensa.ac.ma</p>
+                    </div>
+                    <div>
+                        <h3>WORKING HOURS</h3>
+                        <p>8:00 am to 13:00 pm </p>
+                        <p>13:00 pm to 18:00 pm </p>
+                    </div>
+                    <div>
+                        <h3>FOLLOW US</h3>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <h:form>
+                    <h:inputText id="name" >
+                        <f:passThroughAttribute name="placeholder" value="Full Name" />
+                    </h:inputText>
+                    <h:inputText id="email">
+                        <f:passThroughAttribute name="placeholder" value="Email Address" />
+                    </h:inputText>
+                    <h:inputText id="subject">
+                        <f:passThroughAttribute name="placeholder" value="Subject" />
+                    </h:inputText>
+                    <h:inputTextarea id="message" cols="30" rows="5">
+                        <f:passThroughAttribute name="placeholder" value="Message" />
+                    </h:inputTextarea>
+                    <h:commandButton value="SEND MESSAGE" styleClass="btn btn-third" />
+                </h:form>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <p>Copyright 2024 ensa marrakech. All rights reserved. | made by <b>Kaoutar and Maryam ;)</b></p>
+    </footer>
+</h:body>
+
+</html>

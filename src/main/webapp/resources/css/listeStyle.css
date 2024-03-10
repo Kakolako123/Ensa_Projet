@@ -1,0 +1,29 @@
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination .sub-pagination {
+    display: inline-block;
+}
+
+.pagination .sub-pagination .btn {
+    padding: 6px 12px;
+    margin: 0 2px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+}
+
+.pagination .sub-pagination .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination .sub-pagination .btn-primary:hover,
+.pagination .sub-pagination .btn-primary:focus {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #004799;
+}

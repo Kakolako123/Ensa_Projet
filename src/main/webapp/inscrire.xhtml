@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <meta charset="utf-8" />
+    <title>Inscription</title>
+    <h:outputStylesheet library="webjars" name="bootstrap/5.3.3/css/bootstrap.min.css" />
+    <h:outputStylesheet library="css" name="sinscrire.css" />
+
+</h:head>
+<h:body>
+    <div class="form-container">
+        <h:form id="registrationForm">
+            <h2>Registration</h2>
+            <h:panelGrid columns="2" columnClasses="label, value" styleClass="form-table">
+                <h:outputText value="First Name:" />
+                <h:inputText id="firstname" value="#{userbean.newUser.firstName}" required="true" class="form-control" />
+
+                <h:outputText value="Last Name:" />
+                <h:inputText id="lastname" value="#{userbean.newUser.lastName}" required="true" class="form-control" />
+
+                <h:outputText value="Email:" />
+                <h:inputText id="email" value="#{userbean.newUser.email}" required="true" class="form-control" />
+
+                <h:outputText value="Password:" />
+                <h:inputSecret id="password" value="#{userbean.newUser.password}" required="true" class="form-control" />
+
+                <h:outputText value="Gender:" />
+                <h:selectOneRadio id="gender" value="#{userbean.newUser.gender}" required="true">
+                    <f:selectItem itemValue="male" itemLabel="Male" />
+                    <f:selectItem itemValue="female" itemLabel="Female" />
+                    <f:ajax render="@form" />
+                </h:selectOneRadio>
+
+                <h:outputText value="Birthday:" />
+                <h:inputText id="birthday" value="#{userbean.newUser.birthday}" required="true" class="form-control">
+                    <f:convertDateTime pattern="yyyy-dd-MM" />
+                </h:inputText>
+            </h:panelGrid>
+
+            <div class="button-container">
+                <h:commandButton value="Submit" action="#{userbean.Adduser()}" styleClass="btn btn-danger" />
+                <h:commandButton value="RollBack" action="listUsers" styleClass="btn btn-danger" />
+            </div>
+        </h:form>
+    </div>
+</h:body>
+</html>

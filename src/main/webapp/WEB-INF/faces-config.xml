@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+        xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+        version="2.2">
+     <!-- <managed-bean>
+          <managed-bean-name>articlebean</managed-bean-name>
+          <managed-bean-class>com.example.jsf_devoir.Controller.Articlebean</managed-bean-class>
+          <managed-bean-scope>request</managed-bean-scope>
+      </managed-bean>-->
+    <managed-bean>
+        <managed-bean-name>userbean</managed-bean-name>
+        <managed-bean-class>com.example.jsf_devoir.Controller.UserBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>languageswitcher</managed-bean-name>
+        <managed-bean-class>com.example.jsf_devoir.Controller.LanguageSwitcher</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <converter>
+        <converter-id>customDateConverter</converter-id>
+        <converter-class>com.example.jsf_devoir.Controller.CustomDateConverter</converter-class>
+    </converter>
+    <application>
+        <locale-config>
+            <default-locale>fr</default-locale>
+            <supported-locale>en</supported-locale>
+            <supported-locale>fr</supported-locale>
+        </locale-config>
+
+        <resource-bundle>
+            <base-name>
+                messages
+            </base-name>
+            <var>msg</var>
+        </resource-bundle>
+    </application>
+
+
+</faces-config>

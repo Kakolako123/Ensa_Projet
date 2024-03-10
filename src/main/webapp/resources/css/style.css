@@ -1,0 +1,21 @@
+thead tr th:nth-child(even),
+thead tr th:nth-child(odd) {
+    background-color: lightblue;
+}
+
+tbody tr:nth-child(even) {
+    background-color: seashell;
+}
+
+#footer {
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+}
+.logo {
+    width: 80px; /* Spécifiez la largeur désirée */
+    height: auto; /* Gardez la hauteur proportionnelle pour éviter la distorsion */
+}
